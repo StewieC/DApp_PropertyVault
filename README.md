@@ -207,27 +207,17 @@ npm run dev
 
 ---
 
-## 🏆 Why We Win
-| Criteria | Score |
-|-----------|--------|
-| Innovation | 10/10 |
-| UX/UI | 10/10 |
-| Code Quality | 10/10 |
-| Real-World Use | 10/10 |
-| Demo Readiness | 10/10 |
+## Vision Behind our project
 
-> "This isn't just a hack — it's a product."
+
+> "This isn't just a hack — it's a product. A product to help making transactions and property management easier and managable"
 
 ---
 
 ## 👥 Team
-- **You** – Full-Stack Web3 Developer  
-- **Grok** – AI Co-Pilot (xAI)
+- **Stewart Comfort** – Full-Stack Web3 Developer  
+- **Lucky Omushieni** – Full-Stack Developer
 
----
 
-## 📄 License
-**MIT © 2025 Property Vault**
 
----
 
