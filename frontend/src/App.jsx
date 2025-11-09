@@ -370,7 +370,7 @@ export default function App() {
   );
 }
 
-// FULL STYLES WITH OWNER & TENANT HISTORY
+// FULL STYLES — NOW CENTERED, CLEAN, PROFESSIONAL
 const styles = {
   // LOGIN PAGE
   loginPage: {
@@ -423,7 +423,7 @@ const styles = {
     color: "#95a5a6",
   },
 
-  // MAIN DASHBOARD
+  // MAIN DASHBOARD — NOW CENTERED
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)",
@@ -431,13 +431,14 @@ const styles = {
     fontFamily: "'Inter', 'Segoe UI', sans-serif",
     color: "#e0e0e0",
     boxSizing: "border-box",
-    overflowX: "hidden",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
   },
   container: {
     width: "100%",
-    maxWidth: "1200px",
+    maxWidth: "900px",  // ← FIXED: NARROWER, CENTERED
     margin: "0 auto",
-    padding: 0,
   },
   card: {
     width: "100%",

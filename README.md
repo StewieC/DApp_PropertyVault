@@ -30,7 +30,7 @@
 
 ## 3. How It Works (Step-by-Step)
 
-```mermaid
+
 graph TD
     A[Owner Creates Room] --> B[Tenant Assigned]
     B --> C[Tenant Pays Rent]
@@ -187,14 +187,6 @@ npm run dev
 [0:55] "Transparent. Trustless. On-chain."
 ```
 
----
-
-## 🧪 Live Demo (Local)
-**URL:** http://localhost:5173  
-**Owner Wallet:** Hardhat #0  
-**Tenant Wallet:** Import 0x5de4... key
-
----
 
 ## 🧭 Future Roadmap
 | Feature | Status |
