@@ -1,0 +1,22 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    "constructor(address _usdc, address _initialOwner)",
+    "error OwnableInvalidOwner(address owner)",
+    "error OwnableUnauthorizedAccount(address account)",
+    "error ReentrancyGuardReentrantCall()",
+    "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)",
+    "event PropertyCreated(uint256 indexed id, address tenant)",
+    "event RentPaid(uint256 indexed id, uint256 saved)",
+    "event SavingsWithdrawn(uint256 indexed id, uint256 amount)",
+    "function createProperty(address _tenant, string _roomLabel, uint256 _rentAmount, uint256 _savingsPercent, uint256 _savingsGoal)",
+    "function getPropertyCount() view returns (uint256)",
+    "function owner() view returns (address)",
+    "function payRent(uint256 _id)",
+    "function properties(uint256) view returns (address tenant, string roomLabel, uint256 rentAmount, uint256 savingsPercent, uint256 totalSaved, uint256 savingsGoal, uint256 lastPaid)",
+    "function renounceOwnership()",
+    "function transferOwnership(address newOwner)",
+    "function usdc() view returns (address)",
+    "function withdrawSavings(uint256 _id)"
+  ]
+}
