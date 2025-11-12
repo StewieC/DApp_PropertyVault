@@ -176,16 +176,8 @@ npm run dev
 
 ---
 
-## 🎥 Demo Video Script (60 seconds)
-```
-[0:00] "This is Property Vault — a Web3 rent platform."
-[0:05] "Owner logs in, creates 'Apartment 5A' for tenant 0x3C44..."
-[0:15] "Tenant connects — sees room, pays 100 USDC."
-[0:25] "30 USDC auto-saved. Owner sees in history."
-[0:35] "Tenant sees full payment log."
-[0:45] "Owner withdraws savings — done."
-[0:55] "Transparent. Trustless. On-chain."
-```
+
+
 
 
 ## 🧭 Future Roadmap
