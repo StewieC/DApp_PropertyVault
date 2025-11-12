@@ -177,9 +177,6 @@ npm run dev
 ---
 
 
-
-
-
 ## 🧭 Future Roadmap
 | Feature | Status |
 |----------|---------|

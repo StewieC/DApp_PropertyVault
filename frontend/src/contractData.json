@@ -1,22 +1,274 @@
 {
-  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
   "abi": [
-    "constructor(address _usdc, address _initialOwner)",
-    "error OwnableInvalidOwner(address owner)",
-    "error OwnableUnauthorizedAccount(address account)",
-    "error ReentrancyGuardReentrantCall()",
-    "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)",
-    "event PropertyCreated(uint256 indexed id, address tenant)",
-    "event RentPaid(uint256 indexed id, uint256 saved)",
-    "event SavingsWithdrawn(uint256 indexed id, uint256 amount)",
-    "function createProperty(address _tenant, string _roomLabel, uint256 _rentAmount, uint256 _savingsPercent, uint256 _savingsGoal)",
-    "function getPropertyCount() view returns (uint256)",
-    "function owner() view returns (address)",
-    "function payRent(uint256 _id)",
-    "function properties(uint256) view returns (address tenant, string roomLabel, uint256 rentAmount, uint256 savingsPercent, uint256 totalSaved, uint256 savingsGoal, uint256 lastPaid)",
-    "function renounceOwnership()",
-    "function transferOwnership(address newOwner)",
-    "function usdc() view returns (address)",
-    "function withdrawSavings(uint256 _id)"
+    {
+      "type": "constructor",
+      "stateMutability": "undefined",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_usdc"
+        },
+        {
+          "type": "address",
+          "name": "_initialOwner"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "OwnableInvalidOwner",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "owner"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "OwnableUnauthorizedAccount",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "account"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ReentrancyGuardReentrantCall",
+      "inputs": []
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "OwnershipTransferred",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "previousOwner",
+          "indexed": true
+        },
+        {
+          "type": "address",
+          "name": "newOwner",
+          "indexed": true
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "PropertyCreated",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "indexed": true
+        },
+        {
+          "type": "address",
+          "name": "tenant",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "RentPaid",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "indexed": true
+        },
+        {
+          "type": "uint256",
+          "name": "saved",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "anonymous": false,
+      "name": "SavingsWithdrawn",
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "id",
+          "indexed": true
+        },
+        {
+          "type": "uint256",
+          "name": "amount",
+          "indexed": false
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "createProperty",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_tenant"
+        },
+        {
+          "type": "string",
+          "name": "_roomLabel"
+        },
+        {
+          "type": "uint256",
+          "name": "_rentAmount"
+        },
+        {
+          "type": "uint256",
+          "name": "_savingsPercent"
+        },
+        {
+          "type": "uint256",
+          "name": "_savingsGoal"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "getPropertyCount",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "owner",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "address",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "payRent",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_id"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "properties",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": ""
+        }
+      ],
+      "outputs": [
+        {
+          "type": "address",
+          "name": "tenant"
+        },
+        {
+          "type": "string",
+          "name": "roomLabel"
+        },
+        {
+          "type": "uint256",
+          "name": "rentAmount"
+        },
+        {
+          "type": "uint256",
+          "name": "savingsPercent"
+        },
+        {
+          "type": "uint256",
+          "name": "totalSaved"
+        },
+        {
+          "type": "uint256",
+          "name": "savingsGoal"
+        },
+        {
+          "type": "uint256",
+          "name": "lastPaid"
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "renounceOwnership",
+      "constant": false,
+      "payable": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "transferOwnership",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "newOwner"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "type": "function",
+      "name": "usdc",
+      "constant": true,
+      "stateMutability": "view",
+      "payable": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "type": "address",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "type": "function",
+      "name": "withdrawSavings",
+      "constant": false,
+      "payable": false,
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "_id"
+        }
+      ],
+      "outputs": []
+    }
   ]
 }

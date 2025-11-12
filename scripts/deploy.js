@@ -1,22 +1,45 @@
+require("@nomicfoundation/hardhat-toolbox");
+
 async function main() {
-  const [deployer] = await ethers.getSigners();
-  console.log("Deploying with:", deployer.address);
+  const [deployer, tenant] = await ethers.getSigners();
+  console.log("Deployer:", deployer.address);
 
-  // Sepolia USDC
-  const USDC = "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238";
+  // 1. DEPLOY MOCK USDC
+  const MockUSDC = await ethers.getContractFactory("MockUSDC");
+  const usdc = await MockUSDC.deploy();
+  await usdc.waitForDeployment();
+  const usdcAddress = await usdc.getAddress();
+  console.log("Mock USDC deployed to:", usdcAddress);
 
-  const Vault = await ethers.getContractFactory("PropertyVault");
-  const vault = await Vault.deploy(USDC, deployer.address);
-  await vault.waitForDeployment();
+  // 2. GIVE TENANT SOME USDC
+  await usdc.mint(tenant.address, ethers.parseUnits("1000", 6));
+  console.log("Minted 1000 USDC to tenant");
 
-  const address = await vault.getAddress();
-  console.log("PropertyVault deployed to:", address);
+  // 3. DEPLOY PROPERTY VAULT
+  const PropertyVault = await ethers.getContractFactory("PropertyVault");
+  const propertyVault = await PropertyVault.deploy(usdcAddress, deployer.address);
+  await propertyVault.waitForDeployment();
+  const vaultAddress = await propertyVault.getAddress();
+  console.log("PropertyVault deployed to:", vaultAddress);
 
-  // Save to frontend
+  // 4. SAVE TO FRONTEND
   const fs = require("fs");
-  const data = { address, abi: vault.interface.format() };
-  fs.writeFileSync("frontend/src/contractData.json", JSON.stringify(data, null, 2));
-  console.log("contractData.json saved");
+  const contractData = {
+    address: vaultAddress,
+    abi: JSON.parse(propertyVault.interface.formatJson())
+  };
+
+  fs.writeFileSync(
+    "frontend/src/contractData.json",
+    JSON.stringify(contractData, null, 2)
+  );
+
+  console.log("Contract data saved to frontend/src/contractData.json");
 }
 
-main().catch(console.error);
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
